@@ -1,0 +1,21 @@
+#!/bin/bash
+
+OFILE=$3
+
+echo "LOL" > lol.temp
+echo $1 >> lol.temp
+echo $2 >> lol.temp
+echo $3 >> lol.temp
+echo $4 >> lol.temp
+echo $5 >> lol.temp
+echo $6 >> lol.temp
+echo $7 >> lol.temp
+
+
+echo $2
+touch $OFILE
+echo " -0.200000000000D+02  0.000000000000D+00  1.000000000000D+00  0.000000000000D+00" >> $OFILE
+echo "  0.000000000000D+00  0.000000000000D+00  0.000000000000D+00" >> $OFILE
+echo "  0.000000000000D+00  0.000000000000D+00  0.000000000000D+00" >> $OFILE
+echo "  0.000000000000D+00  0.000000000000D+00  0.000000000000D+00" >> $OFILE
+
