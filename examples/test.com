@@ -1,4 +1,4 @@
-# opt=calcfc external="/home/andersx/dev/goptimizer/examples/dftb+_driver.py" 
+# force external="/home/andersx/dev/goptimizer/examples/dftb+_driver.py" nosymmetry
 
 Title
 
