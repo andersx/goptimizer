@@ -1,4 +1,4 @@
-# force external="/home/andersx/dev/goptimizer/examples/dftb+_driver.py" nosymmetry
+# force external="/home/andersx/dev/goptimizer/dummy_example.py" nosymmetry
 
 Title
 
