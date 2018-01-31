@@ -1,5 +1,3 @@
-#!/usr/bin/env python2
-#
 # MIT License
 #
 # Copyright (c) 2018 Anders Steen Christensen
@@ -23,6 +21,7 @@
 # SOFTWARE.
 
 
+from __future__ import print_function
 
 import fortranformat as ff
 import sys
@@ -163,15 +162,15 @@ def parse_ifile(ifile):
     charge = int(tokens[2])
     spin   = int(tokens[3])
 
-    print "-------------------------------------"
-    print "--  GOPTIMIZER INPUT  ---------------"
-    print "-------------------------------------"
-    print 
-    print "  Number of atoms:     ", natoms
-    print "  Derivative requested:", deriv
-    print "  Total charge:        ", charge
-    print "  Spin:                ", spin
-    print
+    print("-------------------------------------")
+    print("--  GOPTIMIZER INPUT  ---------------")
+    print("-------------------------------------")
+    print()
+    print("  Number of atoms:     ", natoms)
+    print("  Derivative requested:", deriv)
+    print("  Total charge:        ", charge)
+    print("  Spin:                ", spin)
+    print()
 
     coords = np.zeros((natoms,3))
     atomtypes = []
@@ -189,21 +188,21 @@ def parse_ifile(ifile):
 
         atomtypes.append(a)
     
-    print "  Found the following atoms:"
-    print "  --------------------------"
-    print
+    print("  Found the following atoms:")
+    print("  --------------------------")
+    print()
 
 
     for i in range(natoms):
-        print "  Atom %3i  %-3s   %20.12f %20.12f %20.12f" % \
-                (i, atomtypes[i], coords[i,0], coords[i,1], coords[i,2])
+        print("  Atom %3i  %-3s   %20.12f %20.12f %20.12f" % \
+                (i, atomtypes[i], coords[i,0], coords[i,1], coords[i,2]))
         
 
-    print
-    print "-------------------------------------"
-    print "-------------------------------------"
-    print "-------------------------------------"
-    print
+    print()
+    print("-------------------------------------")
+    print("-------------------------------------")
+    print("-------------------------------------")
+    print()
 
 
     return natoms, deriv, charge, spin, atomtypes, coords
