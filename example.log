@@ -2,8 +2,8 @@
  Input=test.com
  Output=test.log
  Initial command:
- /home/andersx/opt/g09/l1.exe "/home/andersx/scr/g09_d0a60982-02a7-11e8-a03d-774e6bdd5bda/Gau-14045.inp" -scrdir="/home/andersx/scr/g09_d0a60982-02a7-11e8-a03d-774e6bdd5bda/"
- Entering Link 1 = /home/andersx/opt/g09/l1.exe PID=     14047.
+ /home/andersx/opt/g09/l1.exe "/home/andersx/scr/g09_d84a19c6-0662-11e8-963b-fbe52d1158ec/Gau-12379.inp" -scrdir="/home/andersx/scr/g09_d84a19c6-0662-11e8-963b-fbe52d1158ec/"
+ Entering Link 1 = /home/andersx/opt/g09/l1.exe PID=     12381.
   
  Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2013,
             Gaussian, Inc.  All Rights Reserved.
@@ -76,11 +76,12 @@
  
  ******************************************
  Gaussian 09:  EM64L-G09RevD.01 24-Apr-2013
-                26-Jan-2018 
+                31-Jan-2018 
  ******************************************
- ----------------------------------------------
- # force external="dummy_example.py" nosymmetry
- ----------------------------------------------
+ ----------------------------------------------------------------------
+ # force external="/home/andersx/dev/goptimizer/dummy_example.py" nosym
+ metry
+ ----------------------------------------------------------------------
  1/10=10,18=10,30=1,38=1/1;
  2/12=2,15=1,17=6,18=5,29=2,40=1/2;
  3/11=9,16=1,25=1,30=1,41=9900000,43=2,71=1/1;
@@ -134,13 +135,53 @@
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned off.
  External calculation of energy and first derivatives.
- Running external command "dummy_example.py R"
-         input file       "/home/andersx/scr/g09_d0a60982-02a7-11e8-a03d-774e6bdd5bda/Gau-14047.EIn"
-         output file      "/home/andersx/scr/g09_d0a60982-02a7-11e8-a03d-774e6bdd5bda/Gau-14047.EOu"
-         message file     "/home/andersx/scr/g09_d0a60982-02a7-11e8-a03d-774e6bdd5bda/Gau-14047.EMs"
-         fchk file        "/home/andersx/scr/g09_d0a60982-02a7-11e8-a03d-774e6bdd5bda/Gau-14047.EFC"
-         mat. el file     "/home/andersx/scr/g09_d0a60982-02a7-11e8-a03d-774e6bdd5bda/Gau-14047.EUF"
- Failed to open output file from external program.
- Error termination via Lnk1e in /home/andersx/opt/g09/l402.exe at Fri Jan 26 15:47:21 2018.
- Job cpu time:       0 days  0 hours  0 minutes  0.1 seconds.
+ Running external command "/home/andersx/dev/goptimizer/dummy_example.py R"
+         input file       "/home/andersx/scr/g09_d84a19c6-0662-11e8-963b-fbe52d1158ec/Gau-12381.EIn"
+         output file      "/home/andersx/scr/g09_d84a19c6-0662-11e8-963b-fbe52d1158ec/Gau-12381.EOu"
+         message file     "/home/andersx/scr/g09_d84a19c6-0662-11e8-963b-fbe52d1158ec/Gau-12381.EMs"
+         fchk file        "/home/andersx/scr/g09_d84a19c6-0662-11e8-963b-fbe52d1158ec/Gau-12381.EFC"
+         mat. el file     "/home/andersx/scr/g09_d84a19c6-0662-11e8-963b-fbe52d1158ec/Gau-12381.EUF"
+-------------------------------------
+--  GOPTIMIZER INPUT  ---------------
+-------------------------------------
+
+  Number of atoms:      3
+  Derivative requested: 1
+  Total charge:         0
+  Spin:                 1
+
+  Found the following atoms:
+  --------------------------
+
+  Atom   0  O          -0.702200003092      -0.056060000247       0.009940000044
+  Atom   1  H          -1.022190004501       0.846780003728      -0.011490000051
+  Atom   2  H           0.257520001134       0.042120000185       0.005220000023
+
+-------------------------------------
+-------------------------------------
+-------------------------------------
+
+ Recovered energy=  666.000000000     dipole=      0.000000000000      0.000000000000      0.000000000000
+ Energy=     666.000000     NIter=   0.
+ Dipole moment=       0.000000       0.000000       0.000000
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        8          -1.000000000   -2.000000000   -3.000000000
+      2        1          -4.000000000   -5.000000000   -6.000000000
+      3        1          -7.000000000   -8.000000000   -9.000000000
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     9.000000000 RMS     5.627314339
+ 1\1\GINC-NUKE\Force\RExternal='/home/andersx/dev/goptimizer/dummy_exam
+ ple.py'\ZDO\H2O1\ANDERSX\31-Jan-2018\0\\# force external="/home/anders
+ x/dev/goptimizer/dummy_example.py" nosymmetry\\Title\\0,1\O,-0.7022,-0
+ .05606,0.00994\H,-1.02219,0.84678,-0.01149\H,0.25752,0.04212,0.00522\\
+ Version=EM64L-G09RevD.01\HF=666.\RMSD=0.000e+00\RMSF=5.627e+00\Dipole=
+ 0.,0.,0.\PG=CS [SG(H2O1)]\\@
+
+
+ TO ERR IS HUMAN - AND TO BLAME IT ON A COMPUTER IS EVEN MORE SO.
+ Job cpu time:       0 days  0 hours  0 minutes  0.4 seconds.
  File lengths (MBytes):  RWF=      5 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 09 at Wed Jan 31 09:43:44 2018.
