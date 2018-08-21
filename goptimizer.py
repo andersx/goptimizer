@@ -234,7 +234,7 @@ def write_ofile(ofile, energy, natoms, dipole=None, gradient=None,
         gradient = np.zeros((natoms,3))
 
     assert gradient.shape[0] == natoms, "ERROR: First dimension of gradient doesn't match natoms."
-    assert gradient.shape[1] == natoms, "ERROR: Second dimension of gradient is not 3."
+    assert gradient.shape[1] == 3, "ERROR: Second dimension of gradient is not 3."
 
     for i in range(natoms):
         output = bodyformat.write(gradient[i])
